@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { TonConnectUIProvider, TonConnectButton } from '@tonconnect/ui-react';
 
 function App() {
   return (
-    <div className="App">
+
+    <TonConnectUIProvider manifestUrl="https://sweet-heart-7938.on.fleek.co/tonconnect-manifest.json">
+       <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          TonConnectUIProviderAdded
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello World 1
-        </a>
+        <span>My App with React UI</span>
+            <TonConnectButton />
       </header>
     </div>
+    </TonConnectUIProvider>
   );
 }
 
